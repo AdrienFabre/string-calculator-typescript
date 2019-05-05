@@ -26,5 +26,12 @@ describe ("StringCalculator", () => {
     expect(string_calculator.add("1\n2\n3")).toEqual(expected_result);
   })
 
+  it('Negative numbers should throw error containing negative number', () => {
+    let string_calculator = new StringCalculator();
+    let expected_result = new Error("The number : '-6' is a negative number");
+    expect(() => string_calculator.add("-6")).toThrow(expected_result);
+  })
+  
+
 
 });

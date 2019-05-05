@@ -1,6 +1,10 @@
 export class StringCalculator {
 
   public add(numbers:string) {
+
+    if (parseInt(numbers) < 0)
+      throw new Error("The number : '" + numbers + "' is a negative number");
+
     if (numbers == "" || numbers == null)
       return 0;
 
