@@ -14,9 +14,17 @@ describe ("StringCalculator", () => {
     expect(string_calculator.add("1")).toEqual(expected_result);
   })
 
-  it('Given two numbers should return the sum of both numbers', () => {
+  it('Given multiple numbers should return the sum of both numbers', () => {
     let string_calculator = new StringCalculator();
-    let expected_result = 3;
-    expect(string_calculator.add("1,2")).toEqual(expected_result);
+    let expected_result = 6;
+    expect(string_calculator.add("1,2,3")).toEqual(expected_result);
   })
+
+  it('Given new line as delimitter should return sum of all numbers', () => {
+    let string_calculator = new StringCalculator();
+    let expected_result = 6;
+    expect(string_calculator.add("1\n2\n3")).toEqual(expected_result);
+  })
+
+
 });

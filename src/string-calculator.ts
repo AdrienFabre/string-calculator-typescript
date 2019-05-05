@@ -3,6 +3,11 @@ export class StringCalculator {
   public add(numbers:string) {
     if (numbers == "" || numbers == null)
       return 0;
+
+    if (numbers.indexOf("\n") !== -1) {
+      numbers = numbers.replace(/\n/g, ",");
+    }
+
     if (numbers.indexOf(",") !== -1) {
       let array = numbers.split(",")
       var total = 0
