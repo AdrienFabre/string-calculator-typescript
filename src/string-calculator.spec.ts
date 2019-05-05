@@ -38,5 +38,11 @@ describe ("StringCalculator", () => {
     expect(string_calculator.add("//:1:2\n3")).toEqual(expected_result);
   })
 
+  it('Numbers higher than 1000 are ignored', () => {
+    let string_calculator = new StringCalculator();
+    let expected_result = 6;
+    expect(string_calculator.add("//:1:2,1001\n3")).toEqual(expected_result);
+  })
+
 
 });

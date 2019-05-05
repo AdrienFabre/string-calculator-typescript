@@ -19,7 +19,7 @@ export class StringCalculator {
     }
 
     if (numbers.indexOf(",") !== -1) {
-      let array = numbers.split(",")
+      let array = numbers.split(",").filter(item => parseInt(item) < 1000)
       var total = 0
       for (let number of array) {
         total += parseInt(number)
