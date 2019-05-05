@@ -32,6 +32,11 @@ describe ("StringCalculator", () => {
     expect(() => string_calculator.add("-6")).toThrow(expected_result);
   })
   
+  it('Supports different delimiters', () => {
+    let string_calculator = new StringCalculator();
+    let expected_result = 6;
+    expect(string_calculator.add("//:1:2\n3")).toEqual(expected_result);
+  })
 
 
 });
