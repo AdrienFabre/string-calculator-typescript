@@ -14,4 +14,9 @@ describe ("StringCalculator", () => {
     expect(string_calculator.add("1")).toEqual(expected_result);
   })
 
+  it('Given two numbers should return the sum of both numbers', () => {
+    let string_calculator = new StringCalculator();
+    let expected_result = 3;
+    expect(string_calculator.add("1,2")).toEqual(expected_result);
+  })
 });
